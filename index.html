@@ -1,51 +1,76 @@
-<!DOCTYPE html> 
-<html lang="en"> 
- 
-<head> 
-    <meta charset="utf-8"> 
-    <title>Home</title> 
-</head> 
- 
-<body> 
-    <div class="container"> 
-        <header> 
-<!--  
-The banner image (su_banner.gif) has to be here  
-[Check point 3 part 1]   
---> 
-            <img src="C:\Users\rapha\OneDrive\Documents\Efrei\Semestre 5\Advanced Web Programming\Lab Works\LW1\assets\images\su_banner.gif" alt="Banner">
-            <nav id="main-nav"> 
-<!--  
-Place your main navigation items here,  
-as explained in the instructions [Check point 3 part 2]  
---> 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LabWork04</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Our Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="excel.html">Excel</a></li>
                 </ul>
-            </nav> 
-        </header> 
- 
-        <main class="content"> 
-            <h2> Welcome To Our Amazing Spa </h2>
-            <p>Welcome to The Striped Umbrella — a full-service resort and spa just steps from the Gulf of Mexico and ten miles east 
-                of Crab Key, Florida. Come enjoy the best of both worlds, a secluded sandy beach populated with beautiful birds, yet a 
-                short drive down the road from world-class shopping, restaurants, and entertainment. Bring a good book and leave your 
-                laptop at the office. You won't want to go home.</p>
-                <img src="C:\Users\rapha\OneDrive\Documents\Efrei\Semestre 5\Advanced Web Programming\Lab Works\LW1\assets\images\pool.jpg" alt="Pool">
-                <br>
-                <video src="C:\Users\rapha\OneDrive\Documents\Efrei\Semestre 5\Advanced Web Programming\Lab Works\LW1\assets\media\w3schooldemo.mp4" controls width="400px" alt="WTF" poster="C:\Users\rapha\OneDrive\Documents\Efrei\Semestre 5\Advanced Web Programming\Lab Works\LW1\assets\images\sea_spa_logo.jpg"></video>
-<!-- place your main page contents here, 
-as explained in the instructions for each page --> 
-        </main> 
- 
-        <footer> 
-<!-- place the footer content here --> 
-            <p>Copyright © 2023 ILAC and EFREI Paris - HTML-CSS major lab-work - created by: THEBAULT Raphaël - All rights reserved</p>
-        </footer> 
- 
-    </div> 
-</body> 
-</html> 
+            </nav>
+        </header>
+        <main>
+            <form id="main-form" name="mainform">
+                <div class="form-group">
+                   <label for="firstName">First Name:</label>
+                   <input type="text" id="firstName" name="firstName" required>
+                </div>
+               <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="province">Province:</label>
+                    <input type="text" id="province" name="province" required>
+                </div>
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Membership Type:</legend>
+                        <div>
+                            <input type="radio" id="premium" name="membership" value="Premium" checked>
+                            <label for="premium">Premium Membership</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="standard" name="membership" value="Standard">
+                            <label for="standard">Standard Membership</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="basic" name="membership" value="Basic">
+                            <label for="basic">Basic Membership</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="submitBtn">Send</button>
+                    <button type="reset">Cancel</button>
+                </div>
+            </form>
+            <div id="output"></div>
+        </main>
+        <footer>
+            <p>ILAC & EFREI - HTML, CSS, and JavaScript Assignment</p>
+        </footer>
+        <div class="theme-switcher">
+            <button id="themeToggle">Toggle Theme</button>
+        </div>
+        <script src="../js/script.js"></script>
+    </body>
+</html>
